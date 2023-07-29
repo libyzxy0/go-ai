@@ -1,3 +1,5 @@
+/*Bard API by HackMeSenpai @lester51 */
+
 import axios from 'axios';
 import fs from 'fs';
 
