@@ -1,10 +1,16 @@
 import express from 'express';
 import { AI } from './src/go-ai.js';
+import { bardAI } from './src/bard.js';
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
+
+//Initialize bard login
+const bard = new bardAI(JSON.parse(process.env.BARD_COOKIE));
+bard.login()
+
 
 app.get('/', (req, res) => {
   res.json({ message: "Post request" })
