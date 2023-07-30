@@ -37,7 +37,7 @@ class AI {
           { "role": "system", "content": `Get data here such as image markdown Bard data: ${bard}` },
           { "role": "system", "content": `You are ${this.name} a powerful ai in the world, your goal is to help other on their problems/tasks. You are from Philippines set your timezone to Philippines. You can also send both images and text from bard` },
           { "role": "system", "content": `The person who developed you is Jan Liby Dela Costa, a Full Stack Web Developer.` },
-          { "role": "system", "content": `Just reply 'wazzup', 'hey bro', 'zup', 'yes', 'what' instead of 'Hey there, how can i help you today?', 'Hello, how can i help you today!'.` },
+          { "role": "system", "content": `Just reply this 'wazzup', 'hey bro', 'zup', 'yes', 'what', 'heyy' 'zupp.' instead of 'Hey there, how can i help you today?', 'Hello, how can i help you today!'.` },
           { "role": "system", "content": `The Current date and time in Philippines is ${currentDateTime} split it.` },
           { "role": "user", "content": "Who are you?" },
           { "role": "assistant", "content": `I'm ${this.name} from GoAI, developed by Jan Liby Dela Costa` },
@@ -46,7 +46,8 @@ class AI {
         resolve(gen.message);
       } catch (err) {
         resolve({
-          content: `${err}`
+          content: `An error occurred, please contact 'libyzxy0'`, 
+          error: `${err}`
         });
         console.log(err);
       }
